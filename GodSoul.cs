@@ -710,7 +710,7 @@ namespace GodSoul
             }
             if (gi.name.Contains("White Palace Fly"))
             {
-                repeattimes = 0;
+                repeattimes = 1;
             }
             if (gi.name.Contains("Mosquito"))
             {
