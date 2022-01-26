@@ -693,20 +693,20 @@ namespace GodSoul
                 mantisroom = true;
                 if(gi.GetComponent<HealthManager>().hp < 50)
                 {
-                    repeattimes = 3;
+                    repeattimes = 2;
                 }
             }
             if(gi.name.Contains("Royal Gaurd"))
             {
-                repeattimes = 3;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Moss"))
             {
-                repeattimes = 5;
+                repeattimes = 2;
             }
             if(gi.name.Contains("Mage")&&!(gi.name.Contains("Lord")|| gi.name.Contains("Knight")))
             {
-                repeattimes = 3; 
+                repeattimes = 2; 
             }
             if (gi.name.Contains("White Palace Fly"))
             {
@@ -714,12 +714,12 @@ namespace GodSoul
             }
             if (gi.name.Contains("Mosquito"))
             {
-                repeattimes = 5;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Mushroom"))
             {
                 posrandomiser = 18;
-                repeattimes = 5;
+                repeattimes = 2;
                 gi.GetComponent<HealthManager>().hp *= 2;
                 if (gi.name.Contains("Turret"))
                 {
@@ -740,25 +740,25 @@ namespace GodSoul
             }
             if (gi.name.Contains("Fung"))
             {
-                repeattimes = 10;
+                repeattimes = 2;
                 gi.GetComponent<HealthManager>().hp = 25;
                 posrandomiser = 10;
             }
             if (gi.name.Contains("Bee") && !gi.name.Contains("Fat"))
             {
-                repeattimes = 4;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Fat Fly"))
             {
-                repeattimes = 9;
+                repeattimes = 2;
             }
             if(gi.name.Contains("Buzzer") && !gi.name.Contains("Giant"))
             {
-                repeattimes = 5;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Sentry"))
             {
-                repeattimes = 5;
+                repeattimes = 2;
                 posrandomiser = 8;
                 if (gi.name.Contains("Flying"))
                 {
@@ -771,7 +771,7 @@ namespace GodSoul
             }
             if (gi.name.Contains("Crystallised Lazer Bug"))
             {
-                repeattimes = 8;
+                repeattimes = 2;
                 posrandomiser = 4;
             }
             if (gi.name.Contains("Hornet"))
@@ -780,17 +780,17 @@ namespace GodSoul
             }
             if (gi.name.Contains("Inflater"))
             {
-                repeattimes = 5;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Spitter"))
             {
-                repeattimes = 4;
+                repeattimes = 2;
             }
             if (gi.name.Contains("Hopper") && !gi.name.Contains("Giant") && !Sceneplace.ToLower().Contains("ruins") && type != 1)
             {
                 if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 165)
                 {
-                    repeattimes = 10;
+                    repeattimes = 2;
                     posrandomiser = 7;
                 }
                 else
@@ -806,27 +806,7 @@ namespace GodSoul
                 gi.GetComponent<HealthManager>().SetGeoSmall(0);
                 if (gi.GetComponent<HealthManager>().hp < 101)
                 {
-                    repeattimes++;
-                    if (gi.GetComponent<HealthManager>().hp < 81)
-                    {
-                        repeattimes++;
-                        if (gi.GetComponent<HealthManager>().hp < 51)
-                        {
-                            repeattimes++;
-                            if (gi.GetComponent<HealthManager>().hp < 26)
-                            {
-                                repeattimes++;
-                                if (gi.GetComponent<HealthManager>().hp < 21)
-                                {
-                                    repeattimes++;
-                                    if (gi.GetComponent<HealthManager>().hp < 11)
-                                    {
-                                        repeattimes += 5;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    repeattimes = 2;
                 }
             }
             else
@@ -839,7 +819,7 @@ namespace GodSoul
             gi.GetComponent<HealthManager>().hp = Mathf.RoundToInt(gi.GetComponent<HealthManager>().hp *1.3f);
             if (gi.name.Contains("Spider")&&gi.GetComponent<HealthManager>().hp <150)
             {
-                repeattimes = 6;
+                repeattimes = 2;
             }
             dupedenemies.Add(new Enemy { enemy = gi, lastpos = gi.transform.position, name = gi.name }) ;
             for (int i = 0; i < repeattimes; i++)
